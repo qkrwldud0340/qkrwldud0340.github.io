@@ -1,0 +1,25 @@
+@import url(normalize.css);
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+:root {
+    --body-ff:'Noto+Sans+KR', sans-serif;
+    --body-fz:1rem;
+    --line-height:24px;
+    --primary-c :#2a40bd;
+    --secondary-c :#c7db07;
+    --white : #fff;
+    --body-ntc:#545454;
+    --body-ptc:#151515;
+}
+/* -------------TYPOGRAPHY------------ */
+body{
+    font-family: var(--body-ff);
+    font-size: var(--body-fz);
+    line-height: var(--line-height);
+}
+
+/* -------------LAYOUT------------ */
+
+
+/* -------------COLORS------------ */
