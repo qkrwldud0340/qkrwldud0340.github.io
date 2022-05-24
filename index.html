@@ -57,28 +57,33 @@
                     </ul>
                 </li>
             </ul>
-            <ul class="top_links">
-                <li>
-                    <a href=""><span class="material-symbols-outlined">search</span></a>
-                </li>
-                <li>
-                    <a href=""><span class="material-symbols-outlined">mail</span></a>
-                </li>
-                <li>
-                    <a href=""><span class="material-symbols-outlined">menu</span></a>
-                </li>
-            </ul>
         </nav>
+        <ul class="top_links">
+            <li>
+                <a href=""><span class="material-symbols-outlined">search</span></a>
+            </li>
+            <li>
+                <a href=""><span class="material-symbols-outlined">mail</span></a>
+            </li>
+            <li>
+                <a href=""><span class="material-symbols-outlined">menu</span></a>
+            </li>
+        </ul>
     </header>
-    <div class="video">
-        <iframe src="https://www.youtube.com/embed/zdTq1FemWu4?controls=0" title="YouTube video player" autoplay muted allowfullscreen></iframe>
-        <span class="material-symbols-outlined">mouse</span>
+    <div class="video_container">
+        <div class="video_bg">
+            <iframe src="https://www.youtube.com/embed/WBYK07Vj-Us?controls=0 &autopaly=1&mute=1&loof=1"></iframe>
+        </div>
+        <div class="mouse_icon">
+            <span class="material-symbols-outlined">mouse</span>
+            <p>Scroll</p>
+        </div>
     </div>
     <main>
-        <section class="hyosungway">
-            <h2>HYOSUNG WAY</h2>
-            <h3>인류의 보다 나은 생활을 선도하는 가치체계</h3>
-            <ul class="hw_wrap">
+        <section class="hyosungway con-pd">
+            <h2 class="content_tt">HYOSUNG WAY</h2>
+            <h3 class="content_desc">인류의 보다 나은 생활을 선도하는 가치체계</h3>
+            <ul class="hw_wrap container">
                 <li>
                     <img src="images/main/hyosungway1.jpg" alt="">
                     <h3>최고</h3>
@@ -100,13 +105,13 @@
                     <p>Integrity</p>
                 </li>
             </ul>
-            <div class="hw_txtwarp">
-                <h3>최고의 기술과 경영 역량을 바탕으로 인류의 보다 나은 생활을 선도한다</h3>
+            <div class="hw_txt_wrap">
+                <h3 class="content_desc">최고의 기술과 경영 역량을 바탕으로 인류의 보다 나은 생활을 선도한다</h3>
                 <p>효성의 존재이유는 ‘최고의 인재’들이 ‘최고의 기술’과 ‘경영역량’을 발휘함으로써 고객가치를 극대화시킬 수 있는 상품과 서비스를 제공하고, 나아가 인류의 삶의 가치를 향상시키는 것입니다.</p>
             </div>
         </section>
-        <section class="business">
-            <h2>BUSINESS</h2>
+        <section class="business con-pd">
+            <h2 class="content_tt">BUSINESS</h2>
             <div class="product_btn">
                 <a class="material-symbols-outlined">dry_cleaning</a>
                 <a class="material-symbols-outlined">directions_boat</a>
@@ -115,7 +120,7 @@
                 <span class="sprite prev">prev</span>
                 <span class="sprite next">next</span>
             </div>
-            <div class="product_slide">
+            <div class="product_slide container">
                 <ul id="fiber">
                     <li><a href="#fiber"><img src="images/main/pd1.jpg" alt=""></a>
                         <span>스판덱스</span>
@@ -155,26 +160,27 @@
         <section class="sustainabilty">
             <div class="manage1">
                 <div class="txt_wrap">
-                    <h2>그린경영</h2>
+                    <h2 class="content_tt">그린경영</h2>
                     <a href="">자세히보기<span class="material-symbols-outlined">trending_flat</span></a>
                 </div>
             </div>
             <div class="manage2">
                 <div class="txt_wrap">
-                    <h2>윤리경영</h2>
+                    <h2 class="content_tt">윤리경영</h2>
                     <a href="">자세히보기<span class="material-symbols-outlined">trending_flat</span></a>
                 </div>
             </div>
             <div class="manage3">
                 <div class="txt_wrap">
-                    <h2>상생경영</h2>
+                    <h2 class="content_tt">상생경영</h2>
                     <a href="">자세히보기<span class="material-symbols-outlined">trending_flat</span></a>
                 </div>
             </div>
         </section>
-        <section class="etc">
+        <section class="etc con-pd">
             <div class="container">
                 <div class="news">
+                    <h2 class="content_tt">NEWS</h2>
                     <ul>
                         <li>
                             <img src="images/main/news1.jpg" alt="">
@@ -215,6 +221,7 @@
                     </ul>
                 </div>
                 <div class="pr">
+                    <h2 class="content_tt">홍보자료</h2>
                     <div>
                         <iframe src="https://www.youtube.com/embed/zdTq1FemWu4" title="YouTube video player" controls allowfullscreen></iframe>
                     </div>
@@ -246,7 +253,7 @@
         </section>
     </main>
     <footer>
-        <div class="containver">
+        <div class="container">
             <div class="buttom_links">
                 <span class="material-symbols-outlined">home</span>
                 <ul>
@@ -276,7 +283,7 @@
         </div>
     </footer>
     <button id="topbtn" title="Go to top">
-        <span class="material-symbols-outlined">top</span>
+        <span class="material-symbols-outlined">expand_less</span>
     </button>
 </body>
 </html>

@@ -58,3 +58,6 @@ a{
 	clear:both;
 	display: block;
 }
+button{
+	all: unset;
+}

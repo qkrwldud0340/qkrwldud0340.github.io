@@ -5,21 +5,92 @@
 :root {
     --body-ff:'Noto+Sans+KR', sans-serif;
     --body-fz:1rem;
-    --line-height:24px;
+    --line-height:27px;
     --primary-c :#2a40bd;
     --secondary-c :#c7db07;
     --white : #fff;
+    --navy : #1a2562;
     --body-ntc:#545454;
     --body-ptc:#151515;
+    --con-width : 1296px;
 }
-/* -------------TYPOGRAPHY------------ */
+/* TYPOGRAPHY */
 body{
     font-family: var(--body-ff);
     font-size: var(--body-fz);
     line-height: var(--line-height);
 }
-
-/* -------------LAYOUT------------ */
-
-
-/* -------------COLORS------------ */
+.content_tt{
+    color: var(--primary-c);
+    font-size: calc(var(--body-fz)*3.125);
+    font-weight: 500;
+    line-height: calc(var(--line-height)*2);
+}
+.content_desc{
+    color: var(--body-ptc);
+    font-size: calc(var(--body-fz)*1.5);
+    font-weight: 500;
+}
+/* LAYOUT */
+.container{
+    width: var(--con-width);
+    margin:0 auto;
+}
+.con-pd{
+    padding: calc(var(--line-height)*5) 0;
+}
+header{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    padding: calc(var(--line-height)*2) 50px var(--line-height);
+    display: flex;
+    justify-content: space-between;
+}
+nav > ul{
+    display: flex;
+}
+nav > ul > li{
+    width: 160px;
+    text-align: center;
+}
+nav > ul > li > a{
+    font-size: 20px;
+}
+nav > ul ul{
+    display: none;
+}
+nav > ul > li:hover ul{
+    display: block;
+    margin: var(--line-height) 0 0;
+    padding: var(--line-height) 0 0;
+    height: 300px;
+    line-height: 43px;
+}
+nav ul li:hover{
+    background: var(--white);
+}
+nav ul li:hover a{
+    color: #151515;
+}
+nav ul li a:hover{
+    color: var(--secondary-c);
+}
+header > ul{
+    display: flex;
+    gap: 30px;
+}
+header ul li a{
+    color: var(--white);
+}
+header > ul li:hover a{
+    color: var(--primary-c);
+}
+.logo a{
+    width: 216px;
+    height: 26px;
+    background: url(../images/common/Logo.png) no-repeat;
+    display: block;
+    text-indent: -9999em;
+}
