@@ -65,10 +65,37 @@
     margin-top: var(--line-height);
 }
 .product_btn{
-    padding: var(--line-height) 0 calc(var(--line-height)*2);
+    padding-top: var(--line-height);
     display: flex;
     gap: 50px;
     justify-content: center;
+}
+.business .controls span{
+    font-size: 48px;
+    color: var(--body-ntc);
+    line-height: 48px;
+}
+.controls{
+    display: flex;
+    justify-content: flex-end;
+    height: var(--line-height);
+    padding-bottom: var(--line-height);
+}
+.controls span{
+    position: relative;
+    right: -17px;
+}
+.controls span:first-child{
+    margin-right: 30px;
+}
+.controls span:first-child:after{
+    content: '';
+    height: 23px;
+    width: 2px;
+    background: var(--body-ntc);
+    position: absolute;
+    right: -15px;
+    top: 12px;
 }
 .business .product_slide{
     margin-bottom: calc(var(--line-height)*2);
@@ -91,6 +118,15 @@
     color: var(--body-ntc);
     font-weight: 500;
 }
+.product_btn > div > a.active{
+    color: var(--white);
+    background: var(--primary-c);
+    border: var(--primary-c);
+}
+.product_btn > div > a.active +span{
+    color: var(--primary-c);
+}
+
 .product_slide > ul{
     display: flex;
     justify-content: center;
@@ -112,4 +148,5 @@
 #trade{
     position: absolute;
     top:0;
+    display: none;
 }
