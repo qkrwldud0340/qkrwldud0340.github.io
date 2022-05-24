@@ -58,15 +58,20 @@
 }
 /* BUSINESS */
 .business{
-    background: url(../images/main/productbg.jpg) no-repeat;
-    height: 100vh;
+    background: url(../images/main/productbg.jpg) no-repeat center center/ cover;
     text-align: center;
+}
+.business h2{
+    margin-top: var(--line-height);
 }
 .product_btn{
     padding: var(--line-height) 0 calc(var(--line-height)*2);
     display: flex;
     gap: 50px;
     justify-content: center;
+}
+.business .product_slide{
+    margin-bottom: calc(var(--line-height)*2);
 }
 .product_btn > div > a{
     display: block;
