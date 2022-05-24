@@ -58,5 +58,28 @@
 }
 /* BUSINESS */
 .business{
+    background: url(../images/main/productbg.jpg) no-repeat;
+    height: 100vh;
     text-align: center;
+}
+.product_btn{
+    padding: var(--line-height) 0 calc(var(--line-height)*2);
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+.product_btn > div > a{
+    display: block;
+    font-size: 80px;
+    color: var(--body-ntc);
+    border: 2px solid var(--body-ntc);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+.product_btn > div > span{
+    font-size: calc(var(--body-fz)*1.5);
+    color: var(--body-ntc);
+    font-weight: 500;
 }
