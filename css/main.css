@@ -72,14 +72,39 @@
     display: block;
     font-size: 80px;
     color: var(--body-ntc);
+    background: var(--white);
     border: 2px solid var(--body-ntc);
     border-radius: 50%;
     width: 120px;
     height: 120px;
     text-align: center;
+    line-height: calc(var(--line-height)*4.4);
+    margin-bottom: 13px;
 }
 .product_btn > div > span{
     font-size: calc(var(--body-fz)*1.5);
     color: var(--body-ntc);
     font-weight: 500;
+}
+.product_slide > ul{
+    display: flex;
+    justify-content: center;
+    gap:24px;
+}
+.product_slide li:nth-child(n+5){
+    display: none;
+}
+.product_slide > ul > li > span{
+    display: block;
+    text-align: left;
+    font-size: calc(var(--body-fz)*1.5);
+    font-weight: 500;
+    padding-top: 17px;
+}
+.product_slide{
+    position: relative;
+}
+#trade{
+    position: absolute;
+    top:0;
 }
