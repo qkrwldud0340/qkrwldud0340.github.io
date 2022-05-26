@@ -39,6 +39,7 @@ body{
 .con-pd{
     padding: calc(var(--line-height)*5) 0;
 }
+/* HEADER */
 header{
     position: absolute;
     z-index: 1;
@@ -93,4 +94,127 @@ header > ul li:hover a{
     background: url(../images/common/Logo.png) no-repeat;
     display: block;
     text-indent: -9999em;
+}
+/* FOOTER */
+footer{
+    background: #f3f3f3;
+    padding: calc(var(--line-height)*2) 0;
+}
+.button_links{
+    display: flex;
+    justify-content: space-between;
+}
+.button_links ul{
+    display: flex;
+    gap: 10px;
+}
+.button_links p{
+    font-size: 56px;
+    color: #333333;
+    position: relative;
+    left: -9px;
+}
+.button_links p:hover{
+    color: var(--primary-c);
+}
+.button_links li a{
+    text-indent: -9999em;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../images/common/sprite_image.png) no-repeat;
+}
+.button_links li:nth-child(2) a{
+    background-position-x: -60px;
+}
+.button_links li:nth-child(3) a{
+    background-position-x: -120px;
+}
+.button_links li:nth-child(4) a{
+    background-position-x: -180px;
+}
+.button_links li a:hover{
+    background-position-y: -60px;
+}
+.footer_menu{
+    display: flex;
+    gap: 54px;
+}
+.footer_menu li{
+    position: relative;
+}
+.footer_menu li a{
+    color: #333333;
+    font-weight: 500;
+}
+.footer_menu li::after{
+    content: '';
+    background: #333333;
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    right: -27px;
+    transform: translateY(-50%);
+}
+.footer_menu li:last-child::after{
+    background: none;
+}
+.footer_menu_wrap{
+    position: relative;
+}
+.footer_menu_wrap:after{
+    content: '';
+    background: #333333;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    margin: var(--line-height) 0;
+}
+.hyo_address ul{
+    display: flex;
+    gap: 60px;
+}
+.hyo_address{
+    color: #333333;
+    font-weight: 500;
+}
+.hyo_address li{
+    position: relative;
+}
+.hyo_address li:first-child:after{
+    content: '';
+    background: #333333;
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+}
+.hyo_address_wrap{
+    margin-top: calc(var(--line-height)*2);
+    display: flex;
+    justify-content: space-between
+}
+/* TOP BUTTON */
+body{
+    position: relative;
+}
+#gotop{
+    position: absolute;
+    right: 50px;
+    bottom: 400px;
+    z-index: 2;
+}
+#gotop a{
+    font-size: 70px;
+    color: var(--body-ntc);
+    border: var(--body-ntc) 2px solid;
+    border-radius: 50%;
+    background: var(--white);
+}
+#gotop a:hover{
+    color: var(--primary-c);
+    border: var(--primary-c) 2px solid;
 }
