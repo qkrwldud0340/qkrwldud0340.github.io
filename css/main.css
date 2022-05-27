@@ -142,11 +142,11 @@
 .product_slide li:hover img{
     transform: scale(1.1);
 }
-.product_slide li .img_warp{
+.product_slide li .img_wrap{
     position: relative;
     overflow: hidden;
 }
-.product_slide li .img_warp::before{
+.product_slide li .img_wrap::before{
     content: '';
     position: absolute;
     left: 0;
@@ -169,7 +169,7 @@
     color: var(--white);
     font-size: 48px;
 }
-.product_slide li:hover .img_warp::before{
+.product_slide li:hover .img_wrap::before{
     opacity: 1;
 }
 .product_slide li:hover p{
@@ -197,6 +197,7 @@
 .sustainabilty{
     height: 100vh;
     display: flex;
+    overflow: hidden;
 }
 .manage1{
     background: url(../images/main/bn1.jpg) no-repeat;
@@ -210,11 +211,11 @@
 .sustainabilty > div{
     width: 33%;
     position: relative;
-    overflow: hidden;
+    transition: 0.5s;
 }
 .sustainabilty > div:hover {
     transform: scale(1.1);
-    transition: 0.5s;
+    z-index: 1;
 }
 .sustainabilty .txt_wrap{
     position: absolute;
@@ -272,7 +273,7 @@
 .news_wrap{
     position: relative;
 }
-.news_warp::before{
+.news_wrap::before{
     content: '';
     position: absolute;
     left: 0;
