@@ -31,6 +31,22 @@ body{
     font-size: calc(var(--body-fz)*1.5);
     font-weight: 500;
 }
+.content_sub_tt{
+    color: var(--white);
+    font-size: calc(var(--body-fz)*3.125);
+    font-weight: 500;
+    line-height: calc(var(--line-height)*2);
+}
+.content_sub_desc{
+    color: var(--white);
+    font-size: calc(var(--body-fz)*1.5);
+    font-weight: 300;
+}
+strong{
+    font-size: calc(var(--body-fz)*1.5);
+    font-weight: 700;
+    color: var(--navy);
+}
 /* LAYOUT */
 .container{
     width: var(--con-width);
@@ -49,33 +65,33 @@ header{
     display: flex;
     justify-content: space-between;
 }
-nav > ul{
+.top_nav > ul{
     display: flex;
 }
-nav > ul > li{
+.top_nav > ul > li{
     width: 160px;
     text-align: center;
 }
-nav > ul > li > a{
+.top_nav > ul > li > a{
     font-size: 20px;
 }
-nav > ul ul{
+.top_nav > ul ul{
     display: none;
 }
-nav > ul > li:hover ul{
+.top_nav > ul > li:hover ul{
     display: block;
     margin: var(--line-height) 0 0;
     padding: var(--line-height) 0 0;
     height: 300px;
     line-height: 43px;
 }
-nav ul li:hover{
+.top_nav ul li:hover{
     background: var(--white);
 }
-nav ul li:hover a{
+.top_nav ul li:hover a{
     color: #151515;
 }
-nav ul li a:hover{
+.top_nav ul li a:hover{
     color: var(--secondary-c);
 }
 header > ul{

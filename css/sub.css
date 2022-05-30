@@ -1,1 +1,205 @@
 @import url(common.css);
+
+/* BANNER */
+.sub_banner{
+    text-align: center;
+    padding: 297px 0 81px; 
+    color: var(--white);
+}
+.intro_banner{
+    background: url(../images/common/intro.jpg) no-repeat;
+}
+.history_banner{
+    background: url(../images/common/history.jpg) no-repeat;
+}
+.fiber_banner{
+    background: url(../images/common/fiber.jpg) no-repeat;
+}
+body > div h3{
+    margin-top: var(--line-height);
+}
+/* SUBNAV */
+.sub_nav ul{
+    display: flex;
+    justify-content: center;
+    line-height: 81px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    gap: 70px;
+    color: var(--body-ntc);
+    font-size: calc(var(--body-fz)*1.25);
+}
+.sub_nav ul li:hover a{
+    color: var(--secondary-c);
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--secondary-c);
+}
+/* TITLE */
+.title_sub{
+    font-size: calc(var(--body-fz)*4.375);
+    text-align: center;
+    color: var(--primary-c);
+    line-height: calc(var(--line-height)*3);
+    margin-top: calc(var(--line-height)*4);
+}
+/* INTRO */
+.intro h3{
+    text-align: center;
+    font-size: calc(var(--body-fz)*1.875);
+    font-weight: 500;
+    color: var(--body-ptc);
+    margin: calc(var(--line-height)*4) 0 calc(var(--line-height)*3);
+}
+.intro_wrap{
+    display: flex;
+    gap: 100px;
+}
+.intro_wrap p{
+    font-size: calc(var(--body-fz)*1.5);
+    line-height: 36px;
+    font-weight: 500;
+}
+.intro{
+    margin-bottom: calc(var(--line-height)*8);
+}
+/* HISTORY */
+.his_btn{
+    display: flex;
+    gap: 20px;
+    font-size: calc(var(--body-fz)*1.5);
+    color: var(--body-ntc);
+    justify-content: center;
+    margin-top: var(--line-height);
+}
+.his_btn li:hover{
+    border-radius: 25px;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.6);
+}
+.his_btn li.active{
+    background: var(--secondary-c);
+    color: var(--white);
+}
+.history_title{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.history_title:before{
+    content: '';
+    height: 3px;
+    width: 1296px;
+    background-color: var(--body-ntc);
+    position: absolute;
+    display: block;
+    top: 29px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.history_title h3{
+    font-size: calc(var(--body-fz)*3.125);
+    font-weight: 500;
+    color: var(--body-ptc);
+    line-height: calc(var(--line-height)*3);
+    width: 450px;
+    text-align: center;
+    margin-top: var(--line-height);
+}
+.history_title p{
+    font-size: calc(var(--body-fz)*1.5);
+    font-weight: 500;
+    color: var(--body-ntc);
+    margin-top: 67px;;
+}
+.history_wrap{
+    margin-bottom: calc(var(--line-height)*8);
+}
+.history_img{
+    background: url(../images/sub/intro/history.png) no-repeat;
+    height: 670px;
+    width: 350px;
+}
+.history_wrap .history_list:nth-child(2) .history_img{
+ background-position-x: -350px;   
+}
+.history_wrap .history_list:nth-child(3) .history_img{
+ background-position-x: -700px;   
+}
+.history_wrap .history_list:nth-child(4) .history_img{
+ background-position-x: -1050px;   
+}
+.history_list ul li{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.history_list ul dl{
+    font-size: calc(var(--body-fz)*1.125);
+    color: var(--body-ptc);
+    width: 610px;
+}
+.history_list ul dt{
+    font-weight: 700;
+}
+/* FIBER */
+.fiber_wrap{
+    padding-top: calc(var(--line-height)*3);
+}
+.fiber_img div:first-child{
+    height: 400px;
+    background-position: center;
+}
+.fiber1{
+    background: url(../images/sub/fiber/spandex.jpg) no-repeat
+}
+.fiber2{
+    background: url(../images/sub/fiber/naylone.jpg) no-repeat;
+}
+.fiber3{
+    background: url(../images/sub/fiber/polyester.jpg) no-repeat;
+}
+.fiber4{
+    background: url(../images/sub/fiber/fabric.jpg) no-repeat;
+}
+.fiber5{
+    background: url(../images/sub/fiber/dyeing.jpg) no-repeat;
+}
+.fiber_img{
+    position: relative;
+}
+.text_box{
+    background: var(--white);
+    color: var(--body-ntc);
+    width: 617px;
+    height: 100%;
+    opacity: 0;
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fiber_img:hover .text_box{
+    opacity: 1;
+}
+.fiber_img:hover div{
+    background-position: 617px;
+}
+.text_box div{
+    padding: calc(var(--line-height)*3);
+}
+.text_box h4{
+    font-size: calc(var(--body-fz)*3.125);
+    font-weight: 500;
+    line-height: calc(var(--line-height)*2);
+}
+.text_box h5{
+    font-size: calc(var(--body-fz)*1.5);
+    margin: var(--line-height) 0 calc(var(--line-height)*3);
+}
+.text_box p{
+    font-size: calc(var(--body-fz)*1.5);
+    position: relative;
+}
+.text_box p a span{
+    font-size: 30px;
+    position: absolute;
+    left: 70px;
+}
