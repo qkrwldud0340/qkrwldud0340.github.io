@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="html, css, 기초, vanila javascript">
-    <meta name="description" content="float 기반 레이아웃, css animation, 웹표준, 웹접근성 준수하는 포트폴리오">
+    <meta name="description" content="flex 기반 레이아웃, css animation, 웹표준, 웹접근성 준수하는 포트폴리오">
     <meta name="robots" content="all">
     <title>2차 포트폴리오 - HyosungTNC</title>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/fullpage.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -70,17 +74,17 @@
             </li>
         </ul>
     </header>
-    <div class="video_container">
-        <div class="video_bg">
-            <video src="video/HYOSUNG.mp4" autoplay loop muted></video>
-        </div>
-        <div class="mouse_icon">
-            <span class="material-symbols-outlined">mouse</span>
-            <p>Scroll</p>
-        </div>
-    </div>
-    <main>
-        <section class="hyosungway con-pd">
+    <main id="fullpage">
+        <section class="video_container section">
+            <div class="video_bg">
+                <video src="video/HYOSUNG.mp4" autoplay loop muted></video>
+            </div>
+            <div class="mouse_icon">
+                <span class="material-symbols-outlined">mouse</span>
+                <p>Scroll</p>
+            </div>
+        </section>
+        <section class="hyosungway con-pd section">
             <h2 class="content_tt">HYOSUNG WAY</h2>
             <h3 class="content_desc">인류의 보다 나은 생활을 선도하는 가치체계</h3>
             <ul class="hw_wrap container">
@@ -110,7 +114,7 @@
                 <p>효성의 존재이유는 ‘최고의 인재’들이 ‘최고의 기술’과 ‘경영역량’을 발휘함으로써 고객가치를 극대화시킬 수 있는 상품과 서비스를 제공하고, 나아가 인류의 삶의 가치를 향상시키는 것입니다.</p>
             </div>
         </section>
-        <section class="business con-pd">
+        <section class="business con-pd section">
             <div class="container">
                 <h2 class="content_tt">BUSINESS</h2>
                 <div class="product_btn">
@@ -205,7 +209,7 @@
                 </div>
             </div>  
         </section>
-        <section class="sustainabilty">
+        <section class="sustainabilty section">
             <div class="manage1">
                 <div class="txt_wrap">
                     <h2 class="content_tt">그린경영</h2>
@@ -228,7 +232,7 @@
                 </div>
             </div>
         </section>
-        <section class="etc con-pd">
+        <section class="etc con-pd section">
             <div class="container">
                 <div class="news">
                     <h2 class="content_tt">NEWS</h2>
@@ -340,5 +344,10 @@
     <button id="gotop" title="Go to top">
         <a href="" class="material-symbols-outlined">expand_less</a>
     </button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/fullpage.min.js"></script>
+    <script src="js/fullpage.extensions.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,5 +1,8 @@
 @import url(common.css);
 
+html,body{
+    height: 100%;
+}
 /* video */
 .video_container{
     position: relative;
