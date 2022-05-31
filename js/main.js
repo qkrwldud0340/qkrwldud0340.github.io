@@ -22,6 +22,17 @@ mainMenu.forEach(function(item){
     });
 });
 
+// $(document).ready(function() {
+// 	$('#fullpage').fullpage({
+// 		//options here
+// 		autoScrolling:true,
+// 		scrollHorizontally: true
+// 	});
+
+// 	//methods
+// 	$.fn.fullpage.setAllowScrolling(false);
+// });
+
 
 //scroll event
 window.addEventListener('scroll',()=>{
