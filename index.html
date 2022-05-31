@@ -11,8 +11,11 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="css/fullpage.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- <link rel="stylesheet" href="css/fullpage.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -76,6 +79,7 @@
     </header>
     <main id="fullpage">
         <section class="video_container section">
+            <h2 class="hidden">Video</h2>
             <div class="video_bg">
                 <video src="video/HYOSUNG.mp4" autoplay loop muted></video>
             </div>
@@ -277,8 +281,9 @@
                 </div>
                 <div class="pr">
                     <h2 class="content_tt">홍보자료</h2>
-                    <div class="pr_video">
-                        <iframe src="https://www.youtube.com/embed/zdTq1FemWu4" title="YouTube video player" controls allowfullscreen></iframe>
+                    <a href="#video" class="pr_video" >video</a>
+                    <div class="video_wrapper" id="video">
+                        <iframe src="https://www.youtube.com/embed/zdTq1FemWu4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="employ">
                         <a href="">채용사이트 바로가기</a>
@@ -346,8 +351,8 @@
     </button>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="js/fullpage.min.js"></script>
-    <script src="js/fullpage.extensions.min.js"></script>
+    <!-- <script src="js/fullpage.min.js"></script>
+    <script src="js/fullpage.extensions.min.js"></script> -->
     <script src="js/main.js"></script>
 </body>
 </html>
