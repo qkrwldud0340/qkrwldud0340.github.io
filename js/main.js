@@ -60,11 +60,43 @@ window.addEventListener('scroll',()=>{
     console.log(hyosungway)
 });
 
-//business slide
-// $('#fiber').bxSlider({
-//     pager:false,
-//     moveSlides:1
-// });
+
+//business 슬라이드
+let slideWrap = document.querySelector('.product_slide'),
+    slides = slideWrap.querySelector('ul'),
+    slide = slideWrap.querySelectorAll('li'),
+    slideCount = slide.length,
+    currentIdx = 0,
+    slideWidth = 306,
+    slideMargin = 24,
+    maxSlides = 4,
+    moveSlide = slideWidth+slideMargin,
+    prevBtn = document.querySelector('#prev'),
+    nextBtn = document.querySelector('#next');
+
+//슬라이드 복사본 생성
+
+
+//슬라이드배치
+slide.forEach((item,index)=>{
+    item.style.left = `${index*moveSlide}px`;
+});
+//이동함수
+function goToSlide(idx){
+    slides.style.left = `${-idx*moveSlide}px`
+    currentIdx = idx;
+    console.log(currentIdx);
+}
+//버튼으로 이동하기
+nextBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    goToSlide(currentIdx + 1);
+
+});
+prevBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    goToSlide(currentIdx - 1);
+});
 
 
 //etc 비디오 모달
