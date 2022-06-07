@@ -9,7 +9,7 @@ let mainMenu = document.querySelectorAll('.top_nav > ul > li'),
 //         tallestSubMenu = smHeight;
 //     }
 // };
-
+let winSCT = 0;
 //header
 mainMenu.forEach(function(item){
     item.addEventListener('mouseover',function(){
@@ -18,7 +18,10 @@ mainMenu.forEach(function(item){
     });
     item.addEventListener('mouseout',function(){
         header.style.height = '27px';
-        header.classList.remove('active');
+
+        if(winSCT == 0){
+            header.classList.remove('active');
+        }
     });
 });
 
@@ -36,7 +39,7 @@ mainMenu.forEach(function(item){
 
 //scroll event
 window.addEventListener('scroll',()=>{
-    let winSCT = window.scrollY;
+    winSCT = window.scrollY;
 
     if(winSCT>0){
         header.classList.add('active');
@@ -60,43 +63,11 @@ window.addEventListener('scroll',()=>{
     console.log(hyosungway)
 });
 
-
-//business 슬라이드
-let slideWrap = document.querySelector('.product_slide'),
-    slides = slideWrap.querySelector('ul'),
-    slide = slideWrap.querySelectorAll('li'),
-    slideCount = slide.length,
-    currentIdx = 0,
-    slideWidth = 306,
-    slideMargin = 24,
-    maxSlides = 4,
-    moveSlide = slideWidth+slideMargin,
-    prevBtn = document.querySelector('#prev'),
-    nextBtn = document.querySelector('#next');
-
-//슬라이드 복사본 생성
-
-
-//슬라이드배치
-slide.forEach((item,index)=>{
-    item.style.left = `${index*moveSlide}px`;
-});
-//이동함수
-function goToSlide(idx){
-    slides.style.left = `${-idx*moveSlide}px`
-    currentIdx = idx;
-    console.log(currentIdx);
-}
-//버튼으로 이동하기
-nextBtn.addEventListener('click',(e)=>{
-    e.preventDefault();
-    goToSlide(currentIdx + 1);
-
-});
-prevBtn.addEventListener('click',(e)=>{
-    e.preventDefault();
-    goToSlide(currentIdx - 1);
-});
+//business slide
+// $('#fiber').bxSlider({
+//     pager:false,
+//     moveSlides:1
+// });
 
 
 //etc 비디오 모달
@@ -117,3 +88,11 @@ targetVideo.addEventListener('click',()=>{
     targetVideo.classList.remove('active');
     targetVideo.querySelector('iframe').setAttribute('src', orgUrl);
 })
+
+//fiber hover
+let fiberImg = $('.fiber_img'),
+    textBox = fiberImg.find('.text_box');
+
+    fiberImg.hover(()=>{
+        textBox.stop().animate({left:'0px'},300);
+    });

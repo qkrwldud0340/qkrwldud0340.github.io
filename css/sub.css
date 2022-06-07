@@ -7,13 +7,13 @@
     color: var(--white);
 }
 .intro_banner{
-    background: url(../images/common/intro.jpg) no-repeat;
+    background: url(../images/common/intro.jpg) no-repeat center center /cover;
 }
 .history_banner{
-    background: url(../images/common/history.jpg) no-repeat;
+    background: url(../images/common/history.jpg) no-repeat center center /cover;
 }
 .fiber_banner{
-    background: url(../images/common/fiber.jpg) no-repeat;
+    background: url(../images/common/fiber.jpg) no-repeat center center /cover;
 }
 body > div h3{
     margin-top: var(--line-height);
@@ -143,12 +143,14 @@ body > div h3{
 .fiber_wrap{
     padding-top: calc(var(--line-height)*3);
 }
-.fiber_img div:first-child{
-    height: 400px;
+.fiber_img > div:first-child{
     background-position: center;
+    background-size: cover;
+    height: 400px;
+    text-indent: -9999em;
 }
 .fiber1{
-    background: url(../images/sub/fiber/spandex.jpg) no-repeat
+    background: url(../images/sub/fiber/spandex.jpg) no-repeat;
 }
 .fiber2{
     background: url(../images/sub/fiber/naylone.jpg) no-repeat;
@@ -169,18 +171,33 @@ body > div h3{
     background: var(--white);
     color: var(--body-ntc);
     width: 617px;
-    height: 100%;
-    opacity: 0;
-    transition: 0.5s;
+    height: 400px;
     position: absolute;
     top: 0;
-    left: 0;
+    transition: 0.5s;
 }
-.fiber_img:hover .text_box{
+.fiber_img:nth-child(2n) .text_box{
+    right: 0px;
+}
+.fiber_img:nth-child(2n+1) .text_box{
+    opacity: 0;
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+}
+.fiber_img:nth-child(2n+1):hover .text_box{
     opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
-.fiber_img:hover div{
-    background-position: 617px;
+.fiber_img:nth-child(2n) .text_box{
+    opacity: 0;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+}
+.fiber_img:nth-child(2n):hover .text_box{
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 .text_box div{
     padding: calc(var(--line-height)*3);
@@ -203,3 +220,20 @@ body > div h3{
     position: absolute;
     left: 70px;
 }
+
+/*
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0)    ;
+        transform: translateZ(0)    ;
+        -moz-transform: translateZ(0)    ;
+        -ms-transform: translateZ(0)    ;
+        -o-transform: translateZ(0)    ;
+}
+*/
