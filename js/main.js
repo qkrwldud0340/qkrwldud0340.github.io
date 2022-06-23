@@ -69,7 +69,6 @@ window.addEventListener('scroll',()=>{
 //     moveSlides:1
 // });
 
-
 //etc 비디오 모달
 let prVideo = document.querySelector('.pr .pr_video');
 let targetVideo = document.querySelector('#video');
