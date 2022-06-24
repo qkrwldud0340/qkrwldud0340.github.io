@@ -257,3 +257,21 @@ body{
     color: var(--primary-c);
     border: var(--primary-c) 2px solid;
 }
+
+
+/* 반응형 */
+
+@media (max-width:1296px){
+    .container{
+        width: 100%;
+    }
+    .top_nav{display: none;}
+}/* 1170이하 */
+
+@media (max-width:768px){
+
+}/* 768이하 */
+
+@media (max-width:480px){
+
+}/* 480이하 */
