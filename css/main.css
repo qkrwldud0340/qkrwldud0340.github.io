@@ -396,3 +396,19 @@
     font-size: 24px;
     margin-top: 10px;
 }
+
+
+
+/* 반응형 */
+
+@media (max-width:1296px){
+    .top_nav{display: none;}
+}/* 1170이하 */
+
+@media (max-width:768px){
+
+}/* 768이하 */
+
+@media (max-width:480px){
+
+}/* 480이하 */
