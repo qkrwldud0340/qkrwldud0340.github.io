@@ -270,10 +270,31 @@ body{
     header .top_nav{
         display: none;
     }
+    h1{
+        position: absolute;
+        left: 50%;
+        top: 54px;
+        transform: translateX(-50%);
+    }
+    header > ul li:nth-child(3){
+        position: absolute;
+        right:50px;
+    }
+    header > ul li:nth-child(2){
+        position: absolute;
+        right:105px;
+    }
 }/* 1296이하 */
 
 @media (max-width:768px){
-
+    .container{
+        width: 100%;
+        padding: 0 24px;
+        box-sizing: border-box;
+    }
+    header > ul li:nth-child(2){
+        display: none;
+    }
 }/* 768이하 */
 
 @media (max-width:480px){
