@@ -264,9 +264,13 @@ body{
 @media (max-width:1296px){
     .container{
         width: 100%;
+        padding: 0 24px;
+        box-sizing: border-box;
     }
-    .top_nav{display: none;}
-}/* 1170이하 */
+    header .top_nav{
+        display: none;
+    }
+}/* 1296이하 */
 
 @media (max-width:768px){
 

@@ -226,8 +226,8 @@ body > div h3{
 /* 반응형 */
 
 @media (max-width:1296px){
-    .top_nav{display: none;}
-}/* 1170이하 */
+
+}/* 1296이하 */
 
 @media (max-width:768px){
 
