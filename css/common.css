@@ -322,9 +322,8 @@ body{
     header > ul li:nth-child(3) {
         right: 20px;
     }
-    .logo a{
+    .logo a, header.active .logo a{
         width: 150px;
         background-size: contain;
     }
-
 }/* 480이하 */
