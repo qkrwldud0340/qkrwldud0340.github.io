@@ -236,6 +236,9 @@ footer{
     display: flex;
     justify-content: space-between
 }
+.hyo_address p{
+    font-size: 14px;
+}
 /* TOP BUTTON */
 body{
     position: relative;
@@ -287,16 +290,41 @@ body{
 }/* 1296이하 */
 
 @media (max-width:768px){
-    .container{
-        width: 100%;
-        padding: 0 24px;
-        box-sizing: border-box;
-    }
     header > ul li:nth-child(2){
         display: none;
+    }
+    #gotop{
+        right: 15px;
+    }
+    .footer_menu {
+        gap: 6vw;
+    }
+    .footer_menu li::after{
+        right: -3vw;
+    }
+    .hyo_address li:first-child:after{
+        display: none;
+    }
+    .hyo_address_wrap, .hyo_address ul{
+        flex-direction:column;
+        gap: 0;
+    }
+    .hyo_address_wrap div:nth-child(2){
+        margin: 0 auto;
     }
 }/* 768이하 */
 
 @media (max-width:480px){
+    header{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    header > ul li:nth-child(3) {
+        right: 20px;
+    }
+    .logo a{
+        width: 150px;
+        background-size: contain;
+    }
 
 }/* 480이하 */
