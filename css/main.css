@@ -355,7 +355,6 @@
     font-size: 24px;
     font-weight: 500;
     border: var(--primary-c) solid 3px;
-    background: var(--white);
     margin: var(--line-height) 0;
     padding: 38px 0;
 }
@@ -503,10 +502,14 @@
     .sustainabilty h2{
         text-align: center;
     }
-    .etc .news ul li div img{
-        display: none;
+    .etc h2 {
+        margin-bottom: 10px;
+    }
+    .etc .news ul li{
+        display: block;
+        width: 100%;
     }
     .etc .news ul li div img{
-        
+        display: none;
     }
 }/* 480이하 */

@@ -58,6 +58,9 @@ strong{
 .hidden{
     display: none;
 }
+main{
+    overflow: hidden;
+}
 /* HEADER */
 header{
     position: absolute;
