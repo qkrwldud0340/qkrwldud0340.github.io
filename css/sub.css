@@ -215,6 +215,9 @@ body > div h3{
     font-size: calc(var(--body-fz)*1.5);
     position: relative;
 }
+.text_box p a:hover{
+    color: var(--secondary-c);
+}
 .text_box p a span{
     font-size: 30px;
     position: absolute;
@@ -288,6 +291,23 @@ body > div h3{
     }
     /* 연혁 */
     /* 섬유 */
+    .fiber_img > div:first-child{
+        height: 30vh;
+    }
+    .fiber_img:nth-child(2n+1) .text_box, .fiber_img:nth-child(2n) .text_box{
+        width: 100vw;
+        height: 100%;
+    }
+    .text_box div{
+        padding: 40px;
+    }
+    .text_box h4{
+        font-size: 6vw;
+    }
+    .text_box h5{
+        font-size: 3vw;
+        margin: 2vh 0;
+    }
 }/* 768이하 */
 
 @media (max-width:480px){
@@ -300,4 +320,29 @@ body > div h3{
     }
     /* 연혁 */
     /* 섬유 */
+    .fiber_img > div:first-child{
+        height: 20vh;
+    }
+    .text_box div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        padding: 5vh;
+    }
+    .text_box h4{
+        line-height: 1.5em;
+    }
+    .text_box h5{
+        margin: 0;
+    }
+    .text_box p a{
+        font-size: 20px;
+    }
+    .text_box p a span{
+        font-size: 20px;
+        left: 55px;
+        top:7px;
+    }
 }/* 480이하 */
