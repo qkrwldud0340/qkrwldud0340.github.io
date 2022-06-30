@@ -226,6 +226,7 @@ body > div h3{
 /* 반응형 */
 
 @media (max-width:1296px){
+    /* 개요 */
     .intro_wrap {
         gap: 50px;
     }
@@ -236,9 +237,18 @@ body > div h3{
     .intro h3{
         line-height: 1.5em;
     }
+    /* 연혁 */
+    /* 섬유 */
+    .fiber_img:nth-child(2n+1) .text_box, .fiber_img:nth-child(2n) .text_box {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        background: rgba(255,255,255,.6)
+    }
 }/* 1296이하 */
 
 @media (max-width:768px){
+    /* 개요 */
     .sub_banner {
         padding-top: 40vw;
     }
@@ -255,7 +265,8 @@ body > div h3{
     }
     .title_sub{
         font-size:8vw;
-        margin-top: calc(var(--line-height)*2)
+        margin-top: 15vw;
+        line-height: 2em;
     }
     .intro{
         margin-bottom: calc(var(--line-height)*2);
@@ -275,8 +286,18 @@ body > div h3{
         font-size: 3vw;
         line-height: 1.5em;
     }
+    /* 연혁 */
+    /* 섬유 */
 }/* 768이하 */
 
 @media (max-width:480px){
-
+    /* 개요 */
+    .sub_nav ul{
+        flex-wrap: wrap;
+    }
+    .sub_nav ul li{
+        font-size: 4vw;
+    }
+    /* 연혁 */
+    /* 섬유 */
 }/* 480이하 */

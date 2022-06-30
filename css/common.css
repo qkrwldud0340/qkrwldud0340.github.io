@@ -77,7 +77,6 @@ header{
 }
 .top_nav > ul{
     display: flex;
-
 }
 .top_nav > ul > li{
     width: 160px;
@@ -137,6 +136,7 @@ header.active ul li a{
 header.active > ul li a:hover{
     color: var(--primary-c);
 }
+/* -------------site map----------- */
 /* FOOTER */
 footer{
     background: #f3f3f3;
@@ -273,7 +273,7 @@ body{
         padding: 0 24px;
         box-sizing: border-box;
     }
-    header .top_nav{
+    header .top_nav .dep1{
         display: none;
     }
     h1{
@@ -282,13 +282,9 @@ body{
         top: 54px;
         transform: translateX(-50%);
     }
-    header > ul li:nth-child(3){
+    header > ul li:first-child{
         position: absolute;
-        right:50px;
-    }
-    header > ul li:nth-child(2){
-        position: absolute;
-        right:105px;
+        left:50px;
     }
 }/* 1296이하 */
 
@@ -315,6 +311,9 @@ body{
     .hyo_address_wrap div:nth-child(2){
         margin: 0 auto;
     }
+    #gotop a{
+        font-size: 10vw;
+    }
 }/* 768이하 */
 
 @media (max-width:480px){
@@ -328,5 +327,20 @@ body{
     .logo a, header.active .logo a{
         width: 150px;
         background-size: contain;
+    }
+    .footer_menu{
+        justify-content: center;
+    }
+    .footer_menu li a{
+        font-size: 3vw;
+    }
+    .hyo_address{
+        text-align: center;
+    }
+    .hyo_address ul li{
+        font-size: 3vw;
+    }
+    .hyo_address p{
+        font-size: 3vw;
     }
 }/* 480이하 */

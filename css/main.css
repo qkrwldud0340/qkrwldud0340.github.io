@@ -214,6 +214,7 @@
     height: 100vh;
     display: flex;
     overflow: hidden;
+    justify-content: space-between;
 }
 .manage1{
     background: url(../images/main/bn1.jpg) no-repeat;
@@ -225,7 +226,7 @@
     background: url(../images/main/bn3.jpg) no-repeat;
 }
 .sustainabilty > div{
-    width: 33%;
+    width: 33.4%;
     position: relative;
     transition: 0.5s;
 }
@@ -468,6 +469,7 @@
         width: 100%;
         height: 100%;
         background-position: center;
+        background-size: cover;
     }
     .etc .news, .pr{
         width: 100%;
@@ -511,5 +513,15 @@
     }
     .etc .news ul li div img{
         display: none;
+    }
+    .pr_video{
+        height: 50vw;
+    }
+    .pr .employ{
+        font-size: 5vw;
+        padding: 5vw;
+    }
+    .pr ul li{
+        padding: 5vw 0;
     }
 }/* 480이하 */
