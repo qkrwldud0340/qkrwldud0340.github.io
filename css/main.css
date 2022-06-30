@@ -441,6 +441,10 @@
     .news_txt{
         width: 60%;
         height: 60%;
+        opacity: 1;
+    }
+    .news_wrap::before{
+        opacity: .5;
     }
 }/* 1296이하 */
 
@@ -507,12 +511,27 @@
     .etc h2 {
         margin-bottom: 10px;
     }
+    .etc .news ul{
+        gap: 5px;
+    }
     .etc .news ul li{
         display: block;
         width: 100%;
+        height: 100px;
     }
     .etc .news ul li div img{
-        display: none;
+        object-fit: cover;
+        height: 100px;
+    }
+    .news_txt{
+        width: 80%;
+        height: 80%;
+    }
+    .news_txt p{
+        margin: 0;
+    }
+    .news_txt span{
+        font-size: 30px;
     }
     .pr_video{
         height: 50vw;
