@@ -48,6 +48,32 @@ window.addEventListener('scroll',()=>{
     }
 });
 
+//sitemap_arrow_accordion
+let arrowUp = $('.arrow_up'),
+    menu2 = $('.menu2');
+
+arrowUp.click(function(){
+    $(this).next().slideToggle();
+    $(this).toggleClass('active');
+})
+// $('.menu1 >li').accordion({
+//     collapsible: true
+//   });
+
+//sitemap_toggle
+let siteMap = $('.site_map'),
+    menuBtn = $('.menu_btn'),
+    closeBtn = $('.close_btn');
+
+menuBtn.click(function(e){
+    e.preventDefault();
+    siteMap.addClass('active');
+})
+closeBtn.click(function(e){
+    e.preventDefault();
+    siteMap.removeClass('active');
+})
+
 //hyosung way
 let hyosungway = document.querySelector('.hyosungway');
 let hyosungwayOST = hyosungway.offsetTop - 600;
