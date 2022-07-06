@@ -142,13 +142,13 @@ header.active > ul li a:hover{
     height: 100vh;
     background: rgba(0, 0, 0, .8);
     position: fixed;
-    right: 0;
+    right: -900px;
     z-index: 100;
     padding: 112px 50px 50px;
-    display: none;
+    transition: 0.3s;
 }
 .site_map.active{
-    display: block;
+    right: 0px;
 }
 .close_btn{
     position: absolute;
@@ -219,6 +219,33 @@ header.active > ul li a:hover{
     left: -10px;
     top: 50%;
     transform: translateY(-50%);
+}
+/* -------------search----------- */
+.search{
+    width: 100vw;
+    height: 0;
+    position: fixed;
+    top: 108px;
+    background-color: var(--white);
+    padding-top: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+.search.active{
+    height: 130px;
+    z-index: 100;
+}
+.search input{
+    width: 450px;
+    border-bottom: 2px solid var(--primary-c);
+    line-height: 30px;
+    outline: none;
+}
+.search button{
+    color: var(--primary-c);
+    position: relative;
+    right: 30px;
+    top: 8px;
 }
 /* FOOTER */
 footer{

@@ -74,6 +74,16 @@ closeBtn.click(function(e){
     siteMap.removeClass('active');
 })
 
+//search_toggle
+let search = $('.search'),
+    searchBtn = $('.search_btn');
+
+searchBtn.click(function(e){
+    e.preventDefault();
+    search.addClass('active')
+})
+
+
 //hyosung way
 let hyosungway = document.querySelector('.hyosungway');
 let hyosungwayOST = hyosungway.offsetTop - 600;
