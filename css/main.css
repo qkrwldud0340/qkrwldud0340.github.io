@@ -443,8 +443,12 @@
         height: 60%;
         opacity: 1;
     }
+    .news_txt p, .news_txt span{
+        color: var(--white);
+    }
     .news_wrap::before{
-        opacity: .5;
+        background-color: rgba(0,0,0,.6);
+        opacity: 1;
     }
 }/* 1296이하 */
 

@@ -68,21 +68,31 @@ let siteMap = $('.site_map'),
 menuBtn.click(function(e){
     e.preventDefault();
     siteMap.addClass('active');
+    closeBtn.css({display:'block', color:'var(--secondary-c)'});
 })
 closeBtn.click(function(e){
     e.preventDefault();
     siteMap.removeClass('active');
+    closeBtn.css('display','none');
 })
 
 //search_toggle
 let search = $('.search'),
     searchBtn = $('.search_btn');
+    closeBtn = $('.close_btn');
+    searchBox = $('.search input');
 
 searchBtn.click(function(e){
     e.preventDefault();
-    search.addClass('active')
+    search.addClass('active');
+    closeBtn.css({display:'block', color:'var(--primary-c)'});
+    searchBox.focus();
 })
-
+closeBtn.click(function(e){
+    e.preventDefault();
+    search.removeClass('active');
+    closeBtn.css('display','none');
+})
 
 //hyosung way
 let hyosungway = document.querySelector('.hyosungway');

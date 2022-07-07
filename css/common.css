@@ -86,12 +86,14 @@ header{
     font-size: 20px;
 }
 .top_nav ul ul{
-    /* display: block; */
     padding-top: calc(var(--line-height)*2);
 }
-header .top_nav ul ul li{
-    color: var(--body-ptc);
+header .top_nav ul ul li a{
+    color: #cbcbcb;
     line-height: 43px;
+}
+header .top_nav ul ul .alive a{
+    color: var(--body-ptc);
 }
 /* -------------------------------- */
 header > ul{
@@ -137,10 +139,15 @@ header.active > ul li a:hover{
     color: var(--primary-c);
 }
 /* -------------site map----------- */
+.btn_wrapper{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
 .site_map{
     width: 800px;
     height: 100vh;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .9);
     position: fixed;
     right: -900px;
     z-index: 100;
@@ -151,12 +158,17 @@ header.active > ul li a:hover{
     right: 0px;
 }
 .close_btn{
-    position: absolute;
+    position: fixed;
     right: 50px;
     top: 54px;
+    z-index: 1000;
+    display: none;
 }
-.close_btn span{
+.close_btn{
     color: var(--white);
+}
+.close_btn:hover{
+    cursor: pointer;
 }
 .menu1 li a{
     color: var(--white);
@@ -194,11 +206,12 @@ header.active > ul li a:hover{
 .menu2{
     display: flex;
     flex-wrap: wrap;
-    padding: 27px 0 54px;
+    padding-bottom:54px;
 }
 
 .menu2 > li{
     width: 25%;
+    margin-top: 10px;
 }
 .menu2 li a:hover{
     color: var(--secondary-c);
@@ -226,15 +239,17 @@ header.active > ul li a:hover{
 /* -------------search----------- */
 .search{
     width: 100vw;
-    height: 0;
+    height: 200px;
     position: fixed;
+    top:-200px;
     background-color: var(--white);
     padding-top: 80px;
     text-align: center;
-    transition: 0.3s;
+    transition:0.3s;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .2);
 }
 .search.active{
-    height: 200px;
+    top:0;
     z-index: 100;
     display: block;
 }
@@ -244,7 +259,7 @@ header.active > ul li a:hover{
     line-height: 30px;
     outline: none;
 }
-.search button{
+.search span{
     color: var(--primary-c);
     position: relative;
     right: 30px;
