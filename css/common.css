@@ -185,6 +185,9 @@ header.active > ul li a:hover{
     transform: rotate(0deg);
     transition: 0.5s;
 }
+.arrow_up:hover{
+    cursor: pointer;
+}
 .arrow_up.active{
     transform: rotate(180deg);
 }
@@ -225,15 +228,15 @@ header.active > ul li a:hover{
     width: 100vw;
     height: 0;
     position: fixed;
-    top: 108px;
     background-color: var(--white);
-    padding-top: 20px;
+    padding-top: 80px;
     text-align: center;
     transition: 0.3s;
 }
 .search.active{
-    height: 130px;
+    height: 200px;
     z-index: 100;
+    display: block;
 }
 .search input{
     width: 450px;
@@ -245,7 +248,10 @@ header.active > ul li a:hover{
     color: var(--primary-c);
     position: relative;
     right: 30px;
-    top: 8px;
+    top: 5px;
+}
+.search button:hover{
+    cursor: pointer;
 }
 /* FOOTER */
 footer{
