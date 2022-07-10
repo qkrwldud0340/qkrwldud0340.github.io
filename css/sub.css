@@ -174,7 +174,7 @@ body .sub_banner h3{
     height: 400px;
     position: absolute;
     top: 0;
-    transition: 0.5s;
+    transition: 1s;
 }
 .fiber_img:nth-child(2n) .text_box{
     right: 0px;
@@ -214,6 +214,7 @@ body .sub_banner h3{
 .text_box p{
     font-size: calc(var(--body-fz)*1.5);
     position: relative;
+    text-transform: uppercase;
 }
 .text_box p a:hover{
     color: var(--secondary-c);
@@ -298,6 +299,9 @@ body .sub_banner h3{
         width: 100vw;
         height: 100%;
     }
+    .fiber_img:nth-child(2n) .text_box div{
+        padding-left: 60px;
+    }
     .text_box div{
         padding: 40px;
     }
@@ -322,6 +326,9 @@ body .sub_banner h3{
     /* 섬유 */
     .fiber_img > div:first-child{
         height: 20vh;
+    }
+    .fiber_img:nth-child(2n) .text_box div{
+        padding-left: 5vh;
     }
     .text_box div {
         display: flex;

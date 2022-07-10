@@ -374,24 +374,23 @@ footer{
     font-size: 14px;
 }
 /* TOP BUTTON */
-body{
-    position: relative;
-}
 #gotop{
-    position: absolute;
+    position: fixed;
     right: 50px;
-    bottom: 400px;
+    bottom: 100px;
     z-index: 2;
+    display: none;
 }
-#gotop a{
+#gotop i{
     font-size: 70px;
     color: var(--body-ntc);
     border: var(--body-ntc) 2px solid;
     border-radius: 50%;
     background: var(--white);
 }
-#gotop a:hover{
-    color: var(--primary-c);
+#gotop i:hover{
+    background: var(--primary-c);
+    color: var(--white);
     border: var(--primary-c) 2px solid;
 }
 
