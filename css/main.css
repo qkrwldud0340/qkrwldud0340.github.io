@@ -178,8 +178,6 @@
     visibility: hidden;
 }
 #fiber, #trade{
-    display: flex;
-    gap:24px;
     width: 100%;
     overflow: hidden;
 }
@@ -264,13 +262,13 @@
     justify-content: space-between;
 }
 .manage1{
-    background: url(../images/main/bn1.jpg) no-repeat;
+    background: url(../images/main/bn1.jpg) no-repeat center center / cover ;
 }
 .manage2{
-    background: url(../images/main/bn2.jpg) no-repeat;
+    background: url(../images/main/bn2.jpg) no-repeat center center / cover;
 }
 .manage3{
-    background: url(../images/main/bn3.jpg) no-repeat;
+    background: url(../images/main/bn3.jpg) no-repeat center center / cover;
 }
 .sustainabilty > div{
     width: 33.4%;
@@ -532,6 +530,9 @@
 }/* 1296이하 */
 
 @media (max-width:768px){
+    .con-pd {
+        padding: calc(var(--line-height)*2) 0;
+    }
     .popup{
         font-size: 80%;
         line-height: 1.5em;
@@ -557,6 +558,9 @@
     }
     .hw_txt_wrap > p{
         font-size: 15px;
+    }
+    .business{
+        height: auto;
     }
     .sustainabilty{
         flex-direction:column;
@@ -597,6 +601,9 @@
     }
     .content_desc{
         font-size: 5vw;;
+    }
+    .business h2{
+        margin-top: 0;
     }
     .sustainabilty h2{
         text-align: center;

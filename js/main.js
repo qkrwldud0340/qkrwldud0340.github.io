@@ -161,11 +161,11 @@ tradeBtn.click(function(e){
     fiberSlide.removeClass('active');
     $('#trade').bxSlider({
         pager:false,
-        minSlides:3,
+        minSlides:1,
         maxSlides:4,
         moveSlides:1,
         slideWidth:306,
-        slideMargin:10
+        slideMargin:24
     });
 });
 
@@ -173,11 +173,11 @@ tradeBtn.click(function(e){
 /* ------------ product slide ------------ */
 $('#fiber').bxSlider({
     pager:false,
-    minSlides:3,
+    minSlides:1,
     maxSlides:4,
     moveSlides:1,
     slideWidth:306,
-    slideMargin:10
+    slideMargin:24
 });
 
 
