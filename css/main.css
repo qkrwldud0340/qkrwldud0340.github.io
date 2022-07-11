@@ -251,8 +251,11 @@
 }
 .bx-wrapper .bx-controls-direction a{
     z-index: 10;
+    margin-top: -40px;
 }
-
+.bx-wrapper .bx-next{
+    
+}
 /* SUSTAINABILTY */
 .sustainabilty{
     height: 100vh;
@@ -517,10 +520,14 @@
     }
     .news_txt p, .news_txt span{
         color: var(--white);
+        transform: none;
     }
     .news_wrap::before{
         background-color: rgba(0,0,0,.6);
         opacity: 1;
+    }
+    .news ul li:hover .news_wrap{
+        transform: none;
     }
 }/* 1296이하 */
 
