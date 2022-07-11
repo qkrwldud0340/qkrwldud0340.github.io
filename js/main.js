@@ -138,7 +138,7 @@ window.addEventListener('scroll',()=>{
 
 
 
-/* ------------ hyosung way ------------ */
+/* ------------ product btn ------------ */
 let fiberBtn = $('.fiber_icon a'),
     tradeBtn = $('.trade_icon a'),
     fiberSlide = $('#fiber'),
@@ -159,12 +159,16 @@ tradeBtn.click(function(e){
     fiberSlide.removeClass('active')
 });
 
-//business slide
-// $('#fiber').bxSlider({
-//     pager:false,
-//     moveSlides:1
-// });
 
+/* ------------ product slide ------------ */
+$('.slide_wrapper > div').bxSlider({
+    pager:false,
+    minSlides:3,
+    maxSlides:4,
+    moveSlides:1,
+    slideWidth:306,
+    slideMargin:10
+});
 
 
 /* ------------ etc video modal ------------ */

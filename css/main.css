@@ -118,41 +118,12 @@
 .business h2{
     margin-top: var(--line-height);
 }
+/* -------- product_btn -------- */
 .product_btn{
     padding-top: var(--line-height);
     display: flex;
     gap: 50px;
     justify-content: center;
-}
-.business .controls span{
-    font-size: 48px;
-    color: var(--body-ntc);
-    line-height: 48px;
-}
-.controls{
-    display: flex;
-    justify-content: flex-end;
-    height: var(--line-height);
-    padding-bottom: var(--line-height);
-}
-.controls span{
-    position: relative;
-    right: -17px;
-}
-.controls span:first-child{
-    margin-right: 30px;
-}
-.controls span:first-child:after{
-    content: '';
-    height: 23px;
-    width: 2px;
-    background: var(--body-ntc);
-    position: absolute;
-    right: -15px;
-    top: 12px;
-}
-.business .product_slide{
-    margin-bottom: calc(var(--line-height)*2);
 }
 .product_btn > div > a{
     display: block;
@@ -170,7 +141,8 @@
 .product_btn > div > a:hover{
     background: var(--primary-c);
     color: var(--white);
-    border: 2px solid var(--white);
+    border: 2px solid var(--primary-c);
+    box-shadow: 1px 3px 5px rgba(0,0,0,.5);
 }
 .product_btn > div > a.active{
     background: var(--primary-c);
@@ -190,36 +162,45 @@
 .product_btn > div.active span{
     color: var(--primary-c);
 }
-.product_slide{
+
+/* -------- product_slide -------- */
+.slide_wrapper{
     position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
 }
 #fiber, #trade{
     display: flex;
     gap:24px;
     opacity: 0;
-    position: absolute;
-    top: 0;
+    width: 100%;
+    overflow: hidden;
 }
 #fiber.active, #trade.active{
     opacity: 1;
 }
-.product_slide li{
+.slide_wrapper .slide_li{
     width: 306px;
+    height: 400px;
+    position: absolute;
 }
-.product_slide li img{
-    width: 100%;
-    transition: 0.3s;
-    box-shadow: 5px 5px rgba(0,0,0,.5);
-}
-.product_slide li:hover img{
-    transform: scale(1.1);
-}
-.product_slide li .img_wrap{
+.slide_wrapper .slide_li .img_wrap{
     border-radius: 0 0 50px 0;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 306px;
+    box-shadow: 1px 3px 5px rgba(0,0,0,.5);
 }
-.product_slide li .img_wrap::before{
+.slide_wrapper .slide_li img{
+    width: 100%;
+    transition: 0.3s;
+}
+.slide_wrapper .slide_li:hover img{
+    transform: scale(1.1);
+}
+.slide_wrapper .slide_li .img_wrap::before{
     content: '';
     position: absolute;
     left: 0;
@@ -231,7 +212,10 @@
     transition: 0.3s;
     z-index: 1;
 }
-.product_slide li p{
+.slide_wrapper .slide_li:hover .img_wrap::before{
+    opacity: 1;
+}
+.slide_wrapper .slide_li a{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -241,27 +225,18 @@
     z-index: 2;
     color: var(--white);
     font-size: 48px;
-    cursor: pointer;
 }
-.product_slide li:hover .img_wrap::before{
+.slide_wrapper .slide_li:hover a{
     opacity: 1;
 }
-.product_slide li:hover p{
-    opacity: 1;
-}
-.product_slide li:nth-child(n+5){
-    display: none;
-}
-.product_slide > ul > li > span{
+.slide_wrapper .slide_li span{
     display: block;
     text-align: left;
     font-size: calc(var(--body-fz)*1.5);
     font-weight: 500;
     padding-top: 17px;
 }
-.product_slide{
-    position: relative;
-}
+
 /* SUSTAINABILTY */
 .sustainabilty{
     height: 100vh;
