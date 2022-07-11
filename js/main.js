@@ -143,6 +143,7 @@ let fiberBtn = $('.fiber_icon a'),
     tradeBtn = $('.trade_icon a'),
     fiberSlide = $('#fiber'),
     tradeSlide = $('#trade');
+    tradeWrap = $('.bx-wrapper:nth-child(2)')
 
 fiberBtn.click(function(e){
     e.preventDefault();

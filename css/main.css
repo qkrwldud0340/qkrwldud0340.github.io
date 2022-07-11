@@ -120,7 +120,7 @@
 }
 /* -------- product_btn -------- */
 .product_btn{
-    padding-top: var(--line-height);
+    padding: var(--line-height);
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -180,6 +180,12 @@
 #fiber.active, #trade.active{
     opacity: 1;
 }
+.bx-wrapper{
+    position: absolute;
+    top: 0;
+    /* box-shadow: none; */
+    background: rgba(255,255,255,.5);
+}
 .slide_wrapper .slide_li{
     width: 306px;
     height: 400px;
@@ -236,7 +242,6 @@
     font-weight: 500;
     padding-top: 17px;
 }
-
 /* SUSTAINABILTY */
 .sustainabilty{
     height: 100vh;
@@ -468,6 +473,9 @@
     }
     .hw_txt_wrap{
         width: 90%;
+    }
+    .slide_wrapper .slide_li .img_wrap{
+        height: auto;
     }
     .etc{
         background-size: cover;
