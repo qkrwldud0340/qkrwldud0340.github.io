@@ -450,6 +450,12 @@ footer{
         width: 50%;
         
     }
+    .button_links p{
+        color: var(--primary-c);
+    }
+    .button_links li a{
+        background-position-y: -60px;
+    }
 }/* 768이하 */
 
 @media (max-width:480px){

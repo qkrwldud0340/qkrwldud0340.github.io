@@ -215,12 +215,17 @@ fiberImg.hover(()=>{
 /* ------------ employ btn hover ------------ */
 let employBtn = $('.employ');
 
-employBtn.hover(function(){
-    $(this).find('.bar').stop().animate({width:'100%'}, 600);
-},function(){
-    $(this).find('.bar').stop().animate({width:'0%'}, 600);
-});
-
+if (window.innerWidth > 768){
+    employBtn.hover(function(){
+        $(this).find('.bar').stop().animate({width:'100%'}, 600);
+    },function(){
+        $(this).find('.bar').stop().animate({width:'0%'}, 600);
+    });
+}else{
+    employBtn.click(function(){
+        $(this).find('.bar').stop().animate({width:'100%'}, 600);
+    });
+}
 
 
 /* ------------ cookie ------------ */
