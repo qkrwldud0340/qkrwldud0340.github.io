@@ -42,12 +42,14 @@ window.addEventListener('scroll',()=>{
 
 
 /* ------------ sitemap arrow accordion ------------ */
-let arrowUp = $('.arrow_up'),
+let arrowDown = $('.arrow_down'),
     menu2 = $('.menu2');
 
-arrowUp.click(function(){
+arrowDown.click(function(){
     $(this).next().slideToggle();
     $(this).toggleClass('active');
+    $(this).next().toggleClass('active'); 
+    $(this).parent().siblings().find('ul').slideUp();
 })
 // $('.menu1 >li').accordion({
 //     collapsible: true
@@ -141,9 +143,8 @@ window.addEventListener('scroll',()=>{
 /* ------------ product btn ------------ */
 let fiberBtn = $('.fiber_icon a'),
     tradeBtn = $('.trade_icon a'),
-    fiberSlide = $('#fiber'),
-    tradeSlide = $('#trade');
-    tradeWrap = $('.bx-wrapper:nth-child(2)')
+    fiberSlide = $('.fiber_wrapper'),
+    tradeSlide = $('.trade_wrapper');
 
 fiberBtn.click(function(e){
     e.preventDefault();
@@ -154,15 +155,23 @@ fiberBtn.click(function(e){
 });
 tradeBtn.click(function(e){
     e.preventDefault();
-    $(this).addClass('active')
-    fiberBtn.removeClass('active')
-    tradeSlide.addClass('active')
-    fiberSlide.removeClass('active')
+    $(this).addClass('active');
+    fiberBtn.removeClass('active');
+    tradeSlide.addClass('active');
+    fiberSlide.removeClass('active');
+    $('#trade').bxSlider({
+        pager:false,
+        minSlides:3,
+        maxSlides:4,
+        moveSlides:1,
+        slideWidth:306,
+        slideMargin:10
+    });
 });
 
 
 /* ------------ product slide ------------ */
-$('.slide_wrapper > div').bxSlider({
+$('#fiber').bxSlider({
     pager:false,
     minSlides:3,
     maxSlides:4,

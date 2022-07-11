@@ -12,6 +12,7 @@
     border-radius:15px;
     background: white;
     z-index: 1000;
+    display: block;
 }
 .popup h2{
     font-size: 18px;
@@ -162,29 +163,35 @@
 .product_btn > div.active span{
     color: var(--primary-c);
 }
-
 /* -------- product_slide -------- */
 .slide_wrapper{
     position: relative;
     width: 100%;
     height: 400px;
+}
+.slide_wrapper > div{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
+    visibility: hidden;
 }
 #fiber, #trade{
     display: flex;
     gap:24px;
-    opacity: 0;
     width: 100%;
     overflow: hidden;
 }
-#fiber.active, #trade.active{
-    opacity: 1;
+.fiber_wrapper.active, .trade_wrapper.active{
+    visibility: visible;
 }
 .bx-wrapper{
     position: absolute;
     top: 0;
-    /* box-shadow: none; */
-    background: rgba(255,255,255,.5);
+    box-shadow: none;
+    background: transparent;
+    border: none;
 }
 .slide_wrapper .slide_li{
     width: 306px;
@@ -242,6 +249,10 @@
     font-weight: 500;
     padding-top: 17px;
 }
+.bx-wrapper .bx-controls-direction a{
+    z-index: 10;
+}
+
 /* SUSTAINABILTY */
 .sustainabilty{
     height: 100vh;

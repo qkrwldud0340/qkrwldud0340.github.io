@@ -153,6 +153,10 @@ header.active > ul li a:hover{
     z-index: 100;
     padding: 112px 50px 50px;
     transition: 0.3s;
+    overflow-y: scroll;
+}
+.site_map::-webkit-scrollbar { 
+  display: none;
 }
 .site_map.active{
     right: 0px;
@@ -163,8 +167,6 @@ header.active > ul li a:hover{
     top: 54px;
     z-index: 1000;
     display: none;
-}
-.close_btn{
     color: var(--white);
 }
 .close_btn:hover{
@@ -189,7 +191,7 @@ header.active > ul li a:hover{
     position: absolute;
     top: 60px;
 }
-.arrow_up{
+.arrow_down{
     font-size: 48px;
     color: var(--white);
     position: absolute;
@@ -197,18 +199,15 @@ header.active > ul li a:hover{
     transform: rotate(0deg);
     transition: 0.5s;
 }
-.arrow_up:hover{
+.arrow_down:hover{
     cursor: pointer;
 }
-.arrow_up.active{
-    transform: rotate(180deg);
+.arrow_down.active{
+    transform: rotate(-180deg);
 }
 .menu2{
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom:54px;
+    display: none;
 }
-
 .menu2 > li{
     width: 25%;
     margin-top: 10px;
